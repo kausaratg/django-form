@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+        .body{
+            width: 70%;
+            background-color: rgb(149 200 216);
+            display: flex;
+            margin: 9% 11%;
+            padding: 3rem;
+        }
+        .body p{
+            margin: 2rem;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Logo</h2>
+        <nav>
+            <h2><a href='{%url 'index' %}'>Home</a></h2>
+            <h2><a href='{%url 'form'%}'>Form</a></h2>
+        </nav>
+    </header>
+    <main>
+        <div class='body'>
+            <p id= 'one' > Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit 
+                laudantium reprehenderit soluta voluptatem quo vero quidem, vel dolorem sequi 
+                recusandae dignissimos unde laborum quaerat repellendus laboriosam odio, cumque
+                molestias!
+            </p>
+            <p id='two'>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit 
+                laudantium reprehenderit soluta voluptatem quo vero quidem, vel dolorem sequi 
+                recusandae dignissimos unde laborum quaerat repellendus laboriosam odio, cumque
+                molestias!
+            </p>
+            <p id='three'>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit 
+                laudantium reprehenderit soluta voluptatem quo vero quidem, vel dolorem sequi 
+                recusandae dignissimos unde laborum quaerat repellendus laboriosam odio, cumque
+                molestias!
+            </p>
+            
+        </div>
+    </main>
+</body>
+</html>

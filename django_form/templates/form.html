@@ -1,0 +1,53 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="{% static 'form.css' %}"/>
+    <style>
+        .me{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action='' method='POST'>
+        {% csrf_token %}
+        <!-- <img src="profile.webp" alt="image of a person"> -->
+        <div class='me'>
+            {% for message in messages %}
+                <h4>{{message}}</h4>
+            {% endfor %}
+        </div>
+        <h3>
+            <label  for="fname">First name: </label>
+            <input name='fname' required type="text" placeholder="Enter first name">
+        </h3>
+        <h3>
+            <label  for="lname">Last Name: </label>
+            <input name='lname' required type="name" placeholder="Enter your last name">
+        </h3>
+        <h3>
+            <label  for="email">Email: </label>
+            <input name='email' required type="email" placeholder="Enter your Email adress">
+        </h3>
+        <h3>
+            <label  for="pnumber">Phone Number: </label>
+            <input name='pnumber' required type="number" placeholder="Enter your Phone Number">
+        </h3>
+        <h3>
+            <label  for="password">password: </label>
+            <input  name='password' required type="password" placeholder="password">
+        </h3>
+        <h3>
+            <label  for="password2">Password again: </label>
+            <input name='password2' required type="password" >
+        </h3>
+        <input id='sub' type="submit" name="sign In">
+    </form>
+</body>
+</html>
